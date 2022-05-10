@@ -33,6 +33,11 @@ DOWNLOADS_2019['csv'] = 'ibp_data_%s_2019.csv'
 DOWNLOADS_2019['csv_zip'] = 'ibp_data_csv_2019.zip'
 DOWNLOADS_2019['json'] = 'ibp_data_2019.json'
 
+DOWNLOADS_2021 = {}
+DOWNLOADS_2021['xlsx'] = 'ibp_data_2021.xlsx'
+DOWNLOADS_2021['csv'] = 'ibp_data_%s_2021.csv'
+DOWNLOADS_2021['csv_zip'] = 'ibp_data_csv_2021.zip'
+DOWNLOADS_2021['json'] = 'ibp_data_2021.json'
 
 DOWNLOADS_PRE_2015 = {}
 DOWNLOADS_PRE_2015['xlsx'] = 'ibp_data_2006-2012.xlsx'
@@ -154,12 +159,35 @@ def run_etl(js_output_path, download_dir_path, skip_downloads=False):
                                                  DOWNLOADS_2019,
                                                  datafiles['years'])
 
+    # 2021 survey data
+    datafiles = {}
+    datafiles['q_xlsx'] = 'OBS2021_QuestionsNumbers+Text.xlsx'
+    datafiles['q_xlsx_sheet'] = '2021 and 2019'
+    datafiles['a_xlsx'] = 'OBI 2021.xlsx'
+    datafiles['a_xlsx_sheet'] = 'Sheet1'
+    datafiles['g_xlsx'] = 'GroupingsOBSQuestions2021.xlsx'
+    datafiles['g_xlsx_qsheet'] = 'QuestionsGroups 2021 and 2019'
+    datafiles['g_xlsx_csheet'] = 'CountriesRegions 2019-21'
+    datafiles['av_xlsx'] = 'Public Availability 2021.xlsx'
+    datafiles['av_xlsx_sheets'] = \
+        ['2006', '2008', '2010', '2012', '2015', '2017', '2019', '2021']
+    datafiles['pp_xlsx'] = 'public participation.xlsx'
+    datafiles['pp_xlsx_sheet'] = 'Sheet1'
+    datafiles['years'] = [2021]
+
+    dataset_2021 = lib_read.read(iso_data, datafiles, '2021')
+    if not skip_downloads:
+        dataset_2021 = lib_write.write_downloads(dataset_2021, iso_data,
+                                                 download_dir_path,
+                                                 DOWNLOADS_2021,
+                                                 datafiles['years'])                                               
+
     dataset = {}
     dataset.update(old_dataset)
     dataset.update(dataset_2015)
     dataset.update(dataset_2017)
-
     dataset.update(dataset_2019)
+    dataset.update(dataset_2021)
 
     # Write output js file
     lib_write.write_js(dataset, js_output_path)

@@ -62,8 +62,8 @@ const COUNTRY_EXCLUDE_LIST = [
 ]
 
 const LEGACY_YEARS = ['2006', '2008', '2010', '2012'];
-const INDIVIDUAL_YEARS = ['2015', '2017', '2019'];
-const THIS_YEAR = '2019';
+const INDIVIDUAL_YEARS = ['2015', '2017', '2019', '2021'];
+const THIS_YEAR = '2021';
 function cumulativeYears(year) {
   let years = LEGACY_YEARS
   if (INDIVIDUAL_YEARS.indexOf(year) > -1) {

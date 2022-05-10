@@ -5,37 +5,25 @@
   </p>
   <table class="table table-bordered">
       <tr class="first-row">
-        <th colspan="2" style="text-align: center;">2006-2012</th>
-        <th colspan="2" style="text-align: center;">2015</th>
-        <th colspan="2" style="text-align: center;">2017</th>
-        <th colspan="2" style="text-align: center;">2019</th>
-      </tr>
-      <tr>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
+        <th style="text-align: center;">2006-2012</th>
+        <th style="text-align: center;">2015</th>
+        <th style="text-align: center;">2017</th>
+        <th style="text-align: center;">2019</th>
+        <th style="text-align: center;">2021</th>
       </tr>
       <tr>
       {{#each excel}}
-        <td style="text-align: right;">{{format}}</td>
-        <td><a href="downloads/{{filename}}">{{filename}}</a> ({{size}})</td>
+        <td><a href="downloads/{{filename}}">{{filename}}</a><br>({{format}}, {{size}})</td>
       {{/each}}
       </tr>
       <tr>
       {{#each csv}}
-        <td style="text-align: right;">{{format}}</td>
-        <td><a href="downloads/{{filename}}">{{filename}}</a> ({{size}})</td>
+        <td><a href="downloads/{{filename}}">{{filename}}</a><br>({{format}}, {{size}})</td>
       {{/each}}
       </tr>
       <tr>
       {{#each json}}
-        <td style="text-align: right;">{{format}}</td>
-        <td><a href="downloads/{{filename}}">{{filename}}</a> ({{size}})</td>
+        <td><a href="downloads/{{filename}}">{{filename}}</a><br>({{format}}, {{size}})</td>
       {{/each}}
       </tr>
   </table>
@@ -48,50 +36,32 @@
   </p>
   <table class="table table-bordered">
       <tr class="first-row">
-        <th colspan="2" style="text-align: center;">2006-2012</th>
-        <th colspan="2" style="text-align: center;">2015</th>
-        <th colspan="2" style="text-align: center;">2017</th>
-        <th colspan="2" style="text-align: center;">2019</th>
+        <th style="text-align: center;">2006-2012</th>
+        <th style="text-align: center;">2015</th>
+        <th style="text-align: center;">2017</th>
+        <th style="text-align: center;">2019</th>
+        <th style="text-align: center;">2021</th>
       </tr>
       <tr>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
-        <th style="text-align: right;">Format</th>
-        <th>Filename</th>
+        <td><a href="downloads/OBI 2006-2012 ALL for web.xlsx">Full Excel Source</a><br> (Excel, 649kb)</td>
+        <td><a href="downloads/OBI 2006-2015 ALL for web.xlsx">Full Excel Source</a><br> (Excel, 736kb)</td>
+        <td><a href="downloads/ibp_data_2017_statfile.xlsx">Full Excel Source</a><br> (Excel, 178kb)</td>
+        <td><a href="downloads/ibp_data_2019_statfile.xlsx">Full Excel Source</a><br> (Excel, 178kb)</td>
+        <td><a href="downloads/ibp_data_2021_statfile.xlsx">Full Excel Source</a><br> (Excel, 148kb)</td>
       </tr>
       <tr>
-        <td style="text-align: right;">Excel</td>
-        <td><a href="downloads/OBI 2006-2012 ALL for web.xlsx">Full Excel Source</a> (649kb)</td>
-        <td style="text-align: right;">Excel</td>
-        <td><a href="downloads/OBI 2006-2015 ALL for web.xlsx">Full Excel Source</a> (736kb)</td>
-        <td style="text-align: right;">Excel</td>
-        <td><a href="downloads/ibp_data_2017_statfile.xlsx">Full Excel Source</a> (178kb)</td>
-        <td style="text-align: right;">Excel</td>
-        <td><a href="downloads/ibp_data_2019_statfile.xlsx">Full Excel Source</a> (178kb)</td>
+        <td><a href="downloads/OBI 2006-2012 dataset codebook.pdf">Dataset Codebook</a><br> (PDF, 343kb)</td>
+        <td><a href="downloads/OBI 2006-2015 dataset codebook.pdf">Dataset Codebook</a><br> (PDF, 1.6mb)</td>
+        <td><a href="downloads/OBS 2017 Codebook.pdf">Dataset Codebook</a><br> (PDF, 383kb)</td>
+        <td><a href="downloads/OBS 2019 Codebook.pdf">Dataset Codebook</a><br> (PDF, 177kb)</td>
+        <td><a href="downloads/OBS 2021 Codebook.pdf">Dataset Codebook</a><br> (PDF, 177kb)</td>
       </tr>
       <tr>
-        <td style="text-align: right;">PDF</td>
-        <td><a href="downloads/OBI 2006-2012 dataset codebook.pdf">Dataset Codebook</a> (343kb)</td>
-        <td style="text-align: right;">PDF</td>
-        <td><a href="downloads/OBI 2006-2015 dataset codebook.pdf">Dataset Codebook</a> (1.6mb)</td>
-        <td style="text-align: right;">PDF</td>
-        <td><a href="downloads/OBS 2017 Codebook.pdf">Dataset Codebook</a> (383kb)</td>
-        <td style="text-align: right;">PDF</td>
-        <td><a href="downloads/OBS 2019 Codebook.pdf">Dataset Codebook</a> (177kb)</td>
-      </tr>
-      <tr>
-        <td style="text-align: right;">STATA</td>
-        <td><a href="downloads/OBI 2006-2012 dataset for web.dta">STATA package</a> (408kb)</td>
-        <td style="text-align: right;">STATA</td>
-        <td><a href="downloads/OBI 2006-2015 dataset for web.dta">STATA package</a> (532kb)</td>
-        <td style="text-align: right;">STATA</td>
-        <td><a href="downloads/ibp_data_2017.dta">STATA package</a> (466kb)</td>
-        <td style="text-align: right;">STATA</td>
-        <td><a href="downloads/ibp_data_2019.dta">STATA package</a> (559kb)</td>
+        <td><a href="downloads/OBI 2006-2012 dataset for web.dta">STATA package</a><br> (STATA, 408kb)</td>
+        <td><a href="downloads/OBI 2006-2015 dataset for web.dta">STATA package</a><br> (STATA, 532kb)</td>
+        <td><a href="downloads/ibp_data_2017.dta">STATA package</a><br> (STATA, 466kb)</td>
+        <td><a href="downloads/ibp_data_2019.dta">STATA package</a><br> (STATA, 559kb)</td>
+        <td><a href="downloads/ibp_data_2021.dta">STATA package</a><br> (STATA, 464kb)</td>
       </tr>
   </table>
 {{/if}}
@@ -137,8 +107,12 @@
           2017
       </label>
       <label class="radio inline">
-        <input type="radio" name="downloadyear" value="2019" checked>
+        <input type="radio" name="downloadyear" value="2019">
           2019
+      </label>
+      <label class="radio inline">
+        <input type="radio" name="downloadyear" value="2021" checked>
+          2021
       </label>
     </p>
   </div>
