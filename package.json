@@ -72,7 +72,7 @@
     "i18n-abide": "0.0.26",
     "ibp-explorer-data-client": "git+https://github.com/okfn/ibp-explorer-data-client.git#v1.3.3",
     "imagemin-gifsicle": "^5.1.0",
-    "imagemin-pngquant": "^5.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "imports": "^1.0.0",
     "imports-loader": "^0.6.5",
     "jquery": "^2.1.3",
