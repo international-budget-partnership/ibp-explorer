@@ -1,93 +1,33 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
     <title>Data Explorer | Open Budget Survey | International Budget Partnership</title>
-    <meta name="description" content="The Open Budget Survey Data Explorer is an interactive resource that lets users examine the results of the International Budget Partnership's Open Budget Survey via data visualizations, custom reports, country datasheets, and more.">
-    <link rel="shortcut icon" href="https://internationalbudget.org/favicon.ico">
-    <link rel="stylesheet" href="vendor.css">
-    <link rel="stylesheet" href="app.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" id="blm_googleFonts-css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed%3A700&amp;ver=4.2.2" type="text/css" media="all">
+    <meta name="description" content="The Open Budget Survey Data Explorer is an interactive resource that lets users examine the results of the International Budget Partnership's Open Budget Survey via data visualizations, custom reports, country datasheets, and more." />
+    <link rel="shortcut icon" href="https://internationalbudget.org/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://gnatih.github.io/ibp-design/css/styles.css" />
+    <link rel="stylesheet" href="https://gnatih.github.io/ibp-design/css/icons.css" />
+    <link rel="stylesheet" href="vendor.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="http://localhost:3001/js/ibp-components.js"></script>
     <script src="javascripts/vendor.js"></script>
     <script src="javascripts/app.js"></script>
   </head>
   <body>
-    <div id="header-container" class="container">
-      <div id="header">
-        <h1 id="logo1">
-          <a href="#" title="Open Budget Index: Data Explorer"><img src="images/data-explorer-logo.png" alt="Open Budget Index: Data Explorer"></a>
-        </h1>
-        <h1 id="logo2">
-          <a href="https://internationalbudget.org/open-budget-survey" title="International Budget Partnership"><img src="images/ibp-logo-round5-small.png" class="printLogo" alt="International Budget Project | Open Budgets. Transform Lives."></a>
-        </h1>
-      </div>
-    </div>
-    <div id="main-nav">
-      <div class="container">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#map">Map</a></li>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#rankings">Rankings</a></li>
-          <li><a href="#profile">Country<br />Datasheet</a></li>
-          <li><a href="#availability">Document Availability</a>
-          <li><a href="#calculator">OBS 2021 Calculator</a></li>
-          <li><a href="#download">Download<br />Data</a></li>
-          <li><a href="https://internationalbudget.org/opening-budgets/open-budget-initiative/open-budget-survey/">IBP Website &raquo;</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container site-main">
+    <ibp-header>
+      <h1 slot="nav-title" class="page-title"></h1>
+      <div slot="nav-description" class="page-description"></div>
+      <div slot="infobox"></div>
+    </ibp-header>
+    <div class="explorer-container site-main">
       <hr class="top" />
       <div id="content">
-        <div id="report-generator">
-        </div>
-        <div id="explorer">
-        </div>
-        <div class="clearfix">
-        </div>
+        <div id="report-generator"></div>
+        <div id="explorer"></div>
       </div>
     </div>
-    <div id="footer-container">
-      <div id="footer">
-        <div id="footer-first">
-          <h4 class="widget-title">Join Our International Network</h4>
-          <div class="textwidget"><p>Connect with organizations working to improve government budget systems, policies and outcomes!</p>
-          <p><a class="footer-button" href="https://internationalbudget.org/budget-work-by-country/join-our-network/">Join</a>
-          <a class="footer-button" href="https://internationalbudget.org/budget-work-by-country/findgroup/">Find Groups</a></p>
-          </div>
-        </div>
-        <div id="footer-second">
-          <img src="https://internationalbudget.org/wp-content/themes/ibp/images/worldmap_footer.png" alt="World Map">
-        </div>
-      </div>
-      <div class="container">
-        <p id="copyright">
-          &copy; 2020 International Budget Partnership. All rights reserved. | Website by
-          <a href="https://okfn.org/" target="_blank" id="okfn">
-            <img src="../images/okf-landscape-white.svg" alt="Open Knowledge Foundation">
-          </a>
-        </p>
-        <ul id="beta">
-          <li><a href="https://internationalbudget.org/who-we-are/">About IBP</a></li>
-          <li><a href="https://internationalbudget.org/pressarchive/">Press Room</a></li>
-          <li><a href="https://internationalbudget.org/contact-us/">Contact</a></li>
-          <li><a href="https://internationalbudget.org/library/copyright/">Copyright</a></li>
-        </ul>
-      </div>
-    </div><!-- /##footer-container -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-33874954-8']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    <ibp-footer></ibp-footer>
   </body>
 </html>

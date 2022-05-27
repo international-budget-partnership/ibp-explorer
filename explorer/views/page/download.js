@@ -15,6 +15,9 @@ class DownloadPage extends Backbone.View {
   }
 
   renderPage(target) {
+    $(".page-title").html("Download Data");
+    $(".page-description").html("How does access to data empower communities? Explore our complete dataset to advocate, educate and improve the budget process in your country.");
+
     let collapsed = false;
     if ($("#accordion2 .accordion-body").hasClass("in")) {
       collapsed = true;
@@ -44,14 +47,8 @@ class DownloadPage extends Backbone.View {
     }
   }
 
-  _repaint(
-    dataset = reportGenerator.dataset,
-    questionSet = reportGenerator.questionSet,
-    region = reportGenerator.region
-  ) {
-    $("#custom-csv").html(
-      reportGenerator.csvAnswers(dataset, region, questionSet, false).join("\n")
-    );
+  _repaint(dataset = reportGenerator.dataset, questionSet = reportGenerator.questionSet, region = reportGenerator.region) {
+    $("#custom-csv").html(reportGenerator.csvAnswers(dataset, region, questionSet, false).join("\n"));
   }
 
   _onNavChange(e) {
@@ -59,12 +56,7 @@ class DownloadPage extends Backbone.View {
     const value = $(e.delegateTarget).val();
     const download = $("#dl-mode");
     download.empty();
-    const all_downloads = [
-      _EXPLORER_DATASET.downloads_old,
-      ..._EXPLORER_DATASET.INDIVIDUAL_YEARS.map(
-        (year) => _EXPLORER_DATASET.forYear(year).downloads
-      ),
-    ];
+    const all_downloads = [_EXPLORER_DATASET.downloads_old, ..._EXPLORER_DATASET.INDIVIDUAL_YEARS.map((year) => _EXPLORER_DATASET.forYear(year).downloads)];
     if (value === "fd") {
       renderFiles = {
         fd: true,
