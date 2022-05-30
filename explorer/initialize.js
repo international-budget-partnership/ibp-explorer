@@ -56,5 +56,5 @@ $(function () {
   initJsPlumb()
   loadDataset()
   window.router = new OBSRouter()
-  Backbone.history.start()
+  Backbone.history.start({ pushState: false })
 })

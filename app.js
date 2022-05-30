@@ -159,15 +159,15 @@ app.use('/', express.static('./_build'))
 
 
 // Set up basic auth for the Questionnaires pages using creds from env var.
-const [basicUserName, basicUserPass] = process.env.QUESTIONNAIRE_AUTH.split(':')
-const basicUserAuthObj = {
-  users: {},
-  challenge: true,
-  realm: 'Questionnaires'
-}
-basicUserAuthObj.users[basicUserName] = basicUserPass
-const basicUserAuth = basicAuth(basicUserAuthObj)
-app.use('/questionnaires', basicUserAuth, express.static('./_build-questionnaires'))
+// const [basicUserName, basicUserPass] = process.env.QUESTIONNAIRE_AUTH.split(':')
+// const basicUserAuthObj = {
+//   users: {},
+//   challenge: true,
+//   realm: 'Questionnaires'
+// }
+// basicUserAuthObj.users[basicUserName] = basicUserPass
+// const basicUserAuth = basicAuth(basicUserAuthObj)
+// app.use('/questionnaires', basicUserAuth, express.static('./_build-questionnaires'))
 
 
 // catch 404 and forward to error handler
