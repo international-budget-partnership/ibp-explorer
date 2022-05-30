@@ -93,7 +93,7 @@ class CalculatorPage extends Backbone.View {
 
     $("[slot=infobox]")
       .html(
-        `<p>Use the 2022 calculator to predict the outcome of the next survey and see how your country can improve:</p>
+        `<p>Use the 2023 calculator to predict the outcome of the next survey and see how your country can improve:</p>
       <ul>
         <li class="d-flex">
           <div class="block-icon"><i class="icon-transparency"></i></div>

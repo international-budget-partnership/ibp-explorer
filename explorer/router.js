@@ -63,20 +63,20 @@ class OBSRouter extends Backbone.Router {
   get routes() {
     return {
       '': 'home',
-      home: 'home',
-      map: 'map',
-      timeline: 'timeline',
-      rankings: 'rankings',
-      availability: 'availability',
+      // home: 'home',
+      // map: 'map',
+      // timeline: 'timeline',
+      // rankings: 'rankings',
+      // availability: 'availability',
       download: 'download',
       // participation: 'participation',
       calculator: 'calculator',
       'calculator/:country': 'calculator',
       'calculator/:country?*params': 'calculator',
-      profile: 'profile',
-      'profile/:country': 'profile',
-      'profile/:country?*params': 'profile',
-      search: 'search'
+      // profile: 'profile',
+      // 'profile/:country': 'profile',
+      // 'profile/:country?*params': 'profile',
+      // search: 'search'
     }
   }
 
