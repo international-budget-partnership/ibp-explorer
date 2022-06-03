@@ -114,8 +114,11 @@ class OBSRouter extends Backbone.Router {
   }
 
   home() {
-    const showReportGenerator = false;
-    this.setCurrent(singletons.splashPage(), showReportGenerator);
+    // const showReportGenerator = false;
+    // this.setCurrent(singletons.splashPage(), showReportGenerator);
+    // this.setCurrent(new CalculatorPage(country, params));
+    window.location.replace("#calculator");
+    window.location.reload();
   }
 
   map() {
