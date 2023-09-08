@@ -167,7 +167,7 @@ app.use('/', express.static('./_build'))
 // }
 // basicUserAuthObj.users[basicUserName] = basicUserPass
 // const basicUserAuth = basicAuth(basicUserAuthObj)
-// app.use('/questionnaires', basicUserAuth, express.static('./_build-questionnaires'))
+app.use('/questionnaires', express.static('./_build-questionnaires'))
 
 
 // catch 404 and forward to error handler
